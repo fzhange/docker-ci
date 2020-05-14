@@ -10,5 +10,5 @@ before_install:
 script:
   - npm run build
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker build -t fzhange/docker-ci
-  - docker push fzhange/docker-ci
+  - docker build -t fzhange/docker-ci:latest .
+  - docker push fzhange/docker-ci:latest
